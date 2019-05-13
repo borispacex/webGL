@@ -44,7 +44,8 @@ function init() {
 	// OBJECT
 	
     
-        var migeometria = new THREE.Geometry();
+	var migeometria = new THREE.Geometry();
+	/*
 	migeometria.vertices.push( new THREE.Vector3( 0.0, 0.0, 0.0 ) );
 	migeometria.vertices.push( new THREE.Vector3( 0.3, 0.0, 0.0 ) );
 	migeometria.vertices.push( new THREE.Vector3( 0.3, 0.3, 0.0 ) );
@@ -52,13 +53,44 @@ function init() {
 	migeometria.vertices.push( new THREE.Vector3( 0.0, 0.3, -0.3 ) );
 	migeometria.vertices.push( new THREE.Vector3( 0.0, 0.3, 0.0 ) );
 	migeometria.vertices.push( new THREE.Vector3( 0.3, 0.0, -0.3 ) );
-
+	*/
+	
+	/*
 	migeometria.faces.push( new THREE.Face3( 0, 1, 2 ) );
 	migeometria.faces.push( new THREE.Face3( 3, 5, 4 ) );
-	//migeometria.faces.push( new THREE.Face3( 0, 5, 3 ) );
+	migeometria.faces.push( new THREE.Face3( 0, 5, 3 ) );
 	migeometria.faces.push( new THREE.Face3( 2, 5, 0 ) );
 	migeometria.faces.push( new THREE.Face3( 0, 3, 6 ) );
 	migeometria.faces.push( new THREE.Face3( 3, 4, 6 ) );
+	*/
+	// vertices
+	migeometria.vertices.push( new THREE.Vector3( 0.0, 0.0, 0.0 ) );	// 1
+	migeometria.vertices.push( new THREE.Vector3( 0.3, 0.0, 0.0 ) );	// 2
+	migeometria.vertices.push( new THREE.Vector3( 0.3, 0.3, 0.0 ) );	// 3
+	migeometria.vertices.push( new THREE.Vector3( 0.0, 0.0, -0.3 ) );	// 4
+
+	migeometria.vertices.push( new THREE.Vector3( 0.0, 0.3, -0.3 ) );	// 5
+	migeometria.vertices.push( new THREE.Vector3( 0.0, 0.3, 0.0 ) );	// 6
+	migeometria.vertices.push( new THREE.Vector3( 0.3, 0.0, -0.3 ) );	// 7
+	migeometria.vertices.push( new THREE.Vector3( 0.3, 0.3, -0.3 ) );	// 8
+
+	 
+	// caras
+	migeometria.faces.push( new THREE.Face3( 0, 1, 2 ) );
+	migeometria.faces.push( new THREE.Face3( 3, 5, 4 ) );
+	migeometria.faces.push( new THREE.Face3( 0, 5, 3 ) );
+	migeometria.faces.push( new THREE.Face3( 2, 5, 0 ) );
+	migeometria.faces.push( new THREE.Face3( 0, 3, 6 ) );
+	migeometria.faces.push( new THREE.Face3( 3, 4, 6 ) );
+
+	migeometria.faces.push( new THREE.Face3( 3, 0, 1 ) );
+	migeometria.faces.push( new THREE.Face3( 6, 1, 0 ) );
+	migeometria.faces.push( new THREE.Face3( 4, 5, 2 ) );
+	migeometria.faces.push( new THREE.Face3( 4, 2, 7 ) );
+	migeometria.faces.push( new THREE.Face3( 2, 1, 6 ) );
+	migeometria.faces.push( new THREE.Face3( 7, 2, 6 ) );
+	migeometria.faces.push( new THREE.Face3( 4, 7, 6 ) );
+
 
     
     var material = new THREE.MeshBasicMaterial( { color: 0xFF0000 } ); // Material de color rojo
